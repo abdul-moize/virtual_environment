@@ -1,6 +1,6 @@
 import requests
 import numpy
-import pandas
+import pandas as pd
 import plotext as plt
 
 # requests library exercise
@@ -31,3 +31,6 @@ plt.title("Plot Example")
 plt.show()
 
 # pandas exercise
+dates = pd.date_range("20130101", periods=6)
+df = pd.DataFrame(numpy.random.randn(6, 4), index=dates, columns=list("ABCD"))
+print(df)
