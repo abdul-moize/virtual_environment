@@ -1,5 +1,6 @@
 import requests
 import numpy
+import pandas as pd
 
 # requests library exercise
 url_posts = 'https://jsonplaceholder.typicode.com/posts'
@@ -20,3 +21,9 @@ numbers = numpy.arange(10)
 # change the even values to 0
 numbers[numbers % 2 == 0] = 0
 print(numbers)
+
+# pandas exercise
+dates = pd.date_range("20130101", periods=6)
+df = pd.DataFrame(numpy.random.randn(6, 4), index=dates, columns=list("ABCD"))
+print(df)
+
