@@ -1,4 +1,5 @@
 import requests
+import numpy
 
 # requests library exercise
 url_posts = 'https://jsonplaceholder.typicode.com/posts'
@@ -14,3 +15,8 @@ del posts
 users = requests.get(url_users).json()
 print('Number of Posts by user: ' + users[user_id-1]['username'] + ' is ' + str(count))
 
+# numpy library exercise
+numbers = numpy.arange(10)
+# change the even values to 0
+numbers[numbers % 2 == 0] = 0
+print(numbers)
