@@ -1,16 +1,16 @@
-# This is a sample Python script.
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# requests library exercise
+url_posts = 'https://jsonplaceholder.typicode.com/posts'
+posts = requests.get(url_posts).json()
+url_users = 'https://jsonplaceholder.typicode.com/users'
+count = 0
+user_id = posts[0]['userId']
+for i in posts:
+    if i['userId'] == user_id:
+        count += 1
+# delete posts json array to save space
+del posts
+users = requests.get(url_users).json()
+print('Number of Posts by user: ' + users[user_id-1]['username'] + ' is ' + str(count))
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
