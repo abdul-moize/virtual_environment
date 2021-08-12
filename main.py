@@ -1,6 +1,7 @@
 import requests
 import numpy
 import pandas as pd
+import plotext as plt
 
 # requests library exercise
 url_posts = 'https://jsonplaceholder.typicode.com/posts'
@@ -27,3 +28,9 @@ dates = pd.date_range("20130101", periods=6)
 df = pd.DataFrame(numpy.random.randn(6, 4), index=dates, columns=list("ABCD"))
 print(df)
 
+# plotext exercise
+y = plt.sin(100, 3)
+plt.plot(y)
+plt.plotsize(100, 30)
+plt.title("Plot Example")
+plt.show()
