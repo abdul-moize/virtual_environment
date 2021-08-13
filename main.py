@@ -1,15 +1,13 @@
 from requests_practice import requests_posts
+from numpy_practice import numpy_change_values
 import numpy
 import pandas as pd
 import plotext as plt
 
 # requests_posts usage
 requests_posts()
-# numpy library
-numbers = numpy.arange(10)
-# change the even values to 0
-numbers[numbers % 2 == 0] = 0
-print(numbers)
+# numpy_change_values usage
+numpy_change_values()
 
 # pandas exercise
 dates = pd.date_range("20130101", periods=6)

@@ -15,3 +15,4 @@ def requests_posts():
     del posts
     users = requests.get(url_users).json()
     print('Number of Posts by user: ' + users[user_id - 1]['username'] + ' is ' + str(count))
+    
