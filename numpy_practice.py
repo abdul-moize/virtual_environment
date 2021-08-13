@@ -6,4 +6,3 @@ def numpy_change_values():
     # change the even values to 0
     numbers[numbers % 2 == 0] = 0
     print(numbers)
-    
